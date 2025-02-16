@@ -1,6 +1,9 @@
+# Function to return number of words in the text
 def num_words(str):
     return len(str.split())
 
+# Function to return a dictionary holding unique chars in the text as the key
+# and the number of times that char appears in the text as the value
 def count_char(str):
     char_count = {}
     chars = set()
@@ -55,6 +58,5 @@ def main():
         if char.isalpha():
             print(f"The '{char}' character was found {char_count[char]} times")
 
-
-
+# Call main function
 main()
