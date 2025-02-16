@@ -24,6 +24,9 @@ def count_char(str):
                 count += 1
         char_count[char] = count
 
+    # Need to account for spaces
+    char_count[' '] = str.count(" ")
+
     # Return the dict
     return char_count
 
@@ -33,13 +36,13 @@ def main():
     with open("./books/frankenstein.txt") as f:
         file_contents = f.read()
     
-    # Print file contents to the console
-    print(file_contents)
+    # # Print file contents to the console
+    # print(file_contents)
 
-    # Print number of words in file
-    print(num_words(file_contents))
+    # # Print number of words in file
+    # print(num_words(file_contents))
 
-    # Get count of each character in the file and store in dictionary
+    # Get count of each character in the file and store in dictionary 
     char_count = count_char(file_contents)
     print(char_count)
 
