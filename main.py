@@ -44,7 +44,16 @@ def main():
 
     # Get count of each character in the file and store in dictionary 
     char_count = count_char(file_contents)
-    print(char_count)
+    # print(char_count)
+
+    # Print Report
+    print("-- Begin report of books/frankenstein.txt --")
+    print(f"{num_words(file_contents)} words found in the document\n")
+
+    # Loop through character dict and print its value to give the number of times each char appears
+    for char in char_count:
+        if char.isalpha():
+            print(f"The '{char}' character was found {char_count[char]} times")
 
 
 
